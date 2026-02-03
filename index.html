@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regras da Staff • Poseidon RP</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Inter, Arial, sans-serif;
+      background: linear-gradient(180deg, #001f3f, #000814);
+      color: #eaf6ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      background: rgba(0, 40, 80, 0.45);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: 0 0 30px rgba(0, 150, 255, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #b6dfff;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+
+    h2 {
+      margin-top: 25px;
+      margin-bottom: 10px;
+      color: #6ecbff;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 8px 0;
+      line-height: 1.6;
+    }
+
+    .accept-box {
+      margin-top: 35px;
+      background: rgba(0, 20, 40, 0.6);
+      padding: 20px;
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    .accept-box label {
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .accept-box input {
+      margin-right: 8px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(90deg, #00b4ff, #0066ff);
+      color: #fff;
+      font-size: 15px;
+      cursor: pointer;
+      opacity: 0.5;
+      transition: 0.3s;
+    }
+
+    button.enabled {
+      opacity: 1;
+    }
+
+    footer {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 13px;
+      color: #8bbcff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>📜 Regras da Staff</h1>
+    <p class="subtitle">
+      Estas regras são obrigatórias para todos os membros da Staff.
+    </p>
+
+    <h2>1️⃣ Conduta</h2>
+    <ul>
+      <li>Respeitar todos os jogadores e membros da equipe.</li>
+      <li>Proibido abuso de poder ou favorecimento.</li>
+      <li>Manter postura profissional dentro e fora da cidade.</li>
+    </ul>
+
+    <h2>2️⃣ Uso de Comandos</h2>
+    <ul>
+      <li>Usar comandos apenas quando necessário.</li>
+      <li>É proibido uso para benefício próprio.</li>
+      <li>Qualquer abuso será punido.</li>
+    </ul>
+
+    <h2>3️⃣ Atendimento</h2>
+    <ul>
+      <li>Responder tickets com educação e clareza.</li>
+      <li>Não discutir com players em público.</li>
+      <li>Resolver conflitos de forma justa.</li>
+    </ul>
+
+    <h2>4️⃣ Hierarquia</h2>
+    <ul>
+      <li>Respeitar superiores e decisões administrativas.</li>
+      <li>Problemas internos devem ser tratados no privado.</li>
+    </ul>
+
+    <h2>5️⃣ Confidencialidade</h2>
+    <ul>
+      <li>Proibido vazar informações internas.</li>
+      <li>Logs, prints e decisões são confidenciais.</li>
+    </ul>
+
+    <h2>6️⃣ Punições</h2>
+    <ul>
+      <li>Advertência verbal ou escrita.</li>
+      <li>Rebaixamento.</li>
+      <li>Remoção da Staff.</li>
+    </ul>
+
+    <div class="accept-box">
+      <label>
+        <input type="checkbox" id="accept" />
+        Li e concordo com todas as regras da Staff
+      </label>
+      <br />
+      <button id="btn">Entrar na City</button>
+    </div>
+
+    <footer>
+      © Poseidon RP • Sistema de Regras da Staff
+    </footer>
+  </div>
+
+  <script>
+    const checkbox = document.getElementById("accept");
+    const button = document.getElementById("btn");
+
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked) {
+        button.classList.add("enabled");
+        button.disabled = false;
+      } else {
+        button.classList.remove("enabled");
+        button.disabled = true;
+      }
+    });
+
+    button.disabled = true;
+    button.addEventListener("click", () => {
+      window.location.href = "https://discord.gg/poseidonrp";
+    });
+  </script>
+</body>
+</html>
